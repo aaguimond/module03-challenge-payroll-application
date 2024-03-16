@@ -16,9 +16,8 @@ const collectEmployees = function() {
     employeesArray.push(employee)
     entry = confirm("Would you like to add another employee?")
     console.log(employeesArray)
-}}
-
-collectEmployees()
+} return employeesArray
+}
 
 // Display the average salary
 function displayAverageSalary(employeesArray) {
