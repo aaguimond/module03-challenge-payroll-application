@@ -8,16 +8,32 @@ const collectEmployees = function() {
   let entry = true;
 
   while (entry) {
-    const firstName = prompt("Please enter an employee's first name.")
+    const firstName = prompt ("Please enter an employee's first name.")
     const lastName = prompt ("Please enter the employee's last name.")
     const salary = prompt ("Please enter the employee's salary.")
-    const employee = {firstName:firstName, lastName:lastName, salary:salary}
+ 
+    const employee = {firstName:firstName, lastName:lastName, salary:Number(salary)}
 
     employeesArray.push(employee)
+
     entry = confirm("Would you like to add another employee?")
     console.log(employeesArray)
-} return employeesArray
+    
 }
+return employeesArray
+}
+
+
+//remove below?
+function NaNtoZero(employeesArray) {
+  for (let i = 0; i < employeesArray.length; i++) {
+    if (Number.isNaN(employeesArray[i])) {
+      employeesArray[i] = 0;
+    }
+  }
+  return employeesArray
+}
+//remove above?
 
 // Display the average salary
 function displayAverageSalary(employeesArray) {
