@@ -27,8 +27,6 @@ const collectEmployees = function() {
     employeesArray.push(employee)
     // The below lets the user choose to continue or not
     entry = confirm("Would you like to add another employee?")
-    // The below logs our array to the console
-    console.log(employeesArray)
 }
 // The below gives us our array
 return employeesArray
@@ -68,8 +66,6 @@ const getRandomEmployee = function(employeesArray) {
   const randomIndex = Math.floor(Math.random()*employeesArray.length);
   // The below recalls the employee located at the index in our array
   const randomEmployee = employeesArray[randomIndex]
-  
-  console.log(randomIndex)
   // The below logs the random employee's first and last names, which are two
   // values stored at their index in the array
   console.log(`The random employee we've chosen is ${randomEmployee.firstName} ${randomEmployee.lastName}`);
